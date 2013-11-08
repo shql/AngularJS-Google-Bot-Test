@@ -2,6 +2,11 @@ Options +FollowSymLinks
 IndexIgnore */*
 RewriteEngine on
 
+# RankJS integration
+RewriteCond %{HTTP_USER_AGENT} .*googlebot.* [OR] [NC]
+RewriteCond %{HTTP_USER_AGENT} .*bingbot.* [NC]
+RewriteRule .* http://www.rankjs.com/crawler/htmlsnapshot?url=$1 [P]
+
 # if a directory or a file exists, use it directly
 RewriteCond %{REQUEST_FILENAME} -s [OR]
 RewriteCond %{REQUEST_FILENAME} -l [OR]
