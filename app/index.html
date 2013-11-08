@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en" ng-app="seo">
+<head>
+  <meta charset="utf-8">
+  <meta name="title" content="AngularJS Google Robot Test">
+  <meta name="description" content="This page tests Angular with the Google Search Robot">
+  <title>{{ pageTitle }}</title>
+  <link rel="stylesheet" href="/css/app.css"/>
+  <base href="/">
+</head>
+<body>
+  <head>
+    <nav>
+      <ul class="menu">
+        <li><a href="/home">Home</a></li>
+        <li><a href="/list">Article List</a></li>
+      </ul>
+    </nav>
+  </head>
+
+  <div ng-view></div>
+
+  <footer>
+    <div>Angular seed app: v<span app-version></span></div>
+  </footer>
+
+  <!-- In production use:
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+  -->
+  <script src="lib/angular/angular.js"></script>
+  <script src="lib/angular/angular-route.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/services.js"></script>
+  <script src="js/controllers.js"></script>
+  <script src="js/filters.js"></script>
+  <script src="js/directives.js"></script>
+</body>
+</html>
